@@ -250,7 +250,10 @@ def update_figure(selected):
                           reversescale=True,
                           colorscale="RdBu",marker={'line': {'color': 'rgb(180,180,180)','width': 0.5}},
                           colorbar={"thickness": 10, "len": 0.3, "x": 0.9, "y": 0.7,
-                                    'title': {"text": 'mean of attribute', "side": "top"}})
+#                                     'title': {"text": 'mean of attribute', "side": "top"}})
+                                    'title': {"text": 'mean of attribute', "side": "bottom"},
+                                    'tickvals': [2, 10],
+                                    'ticktext': ['100', '100,00']})
     return {"data": [trace],
             "layout": go.Layout(height=500, width=800, margin=dict(l=0, r=0, t=0, b=0), 
                                 geo={'showframe': False, 'showcoastlines': False,

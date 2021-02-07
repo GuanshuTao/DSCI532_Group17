@@ -24,7 +24,8 @@ class DataManager():
 
     # make initial charts, land-on page
     def plot_altair(self, data, by='Overall', ascending=False, show_n=10):
-        df_nation = data.groupby('Nationality').agg({by: 'mean'}).round(2).reset_index()
+#         df_nation = data.groupby('Nationality').agg({by: 'mean'}).round(2).reset_index()
+        df_nation = data.groupby('Nationality').agg({by: 'mean'}).round(4).reset_index()
         df_nation = df_nation.sort_values(by, ascending=ascending)[:show_n]
         nation_chart = alt.Chart(df_nation).mark_bar().encode(
             alt.X('Nationality', sort='-y'),
@@ -33,7 +34,8 @@ class DataManager():
                 height=150,
                 width=200)
 
-        df_club = data.groupby('Club').agg({by: 'mean'}).round(2).reset_index()
+#         df_club = data.groupby('Club').agg({by: 'mean'}).round(2).reset_index()
+        df_club = data.groupby('Club').agg({by: 'mean'}).round(4).reset_index()
         df_club = df_club.sort_values(by, ascending=ascending)[:show_n]
         club_chart = alt.Chart(df_club).mark_bar().encode(
             alt.X('Club', sort='-y'),
