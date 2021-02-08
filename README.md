@@ -11,7 +11,7 @@ Thank you for visiting the FIFA Star Board app project repository.
 **A Quick Demo**
 
 
-<img src="img/demo.gif" />
+<img src="img/DEMO.gif" />
 
 * [What are we doing?](#about-our-project)
 * [Who are we?](#about-us)
